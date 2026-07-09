@@ -19,8 +19,7 @@
 <link rel="preload" as="image" href="landing.jpg">
 </head>
 
-<!-- FIX 1: 'async' ki jagah 'defer' lagaya taake GA4 script page ke load hone (LCP) mai rukawat na bane aur unused JS ka impact kam ho -->
-<script defer src="https://www.googletagmanager.com/gtag/js?id=G-HG123BCKRZ"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HG123BCKRZ"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -29,8 +28,7 @@
 </script>
 
 <body>
-<!-- FIX 2: 'decoding="async"' hata diya taake LCP main image jaldi render ho, aur 'loading="eager"' lagaya hai -->
-<img src="landing.jpg" alt="" fetchpriority="high" loading="eager">
+<img src="landing.jpg" alt="" fetchpriority="high" decoding="async">
 
 <script>
 var SMART_LINK = 'https://disintegratehesitate.com/c2c6799vp?key=b8c16589351694939ecbf11cdbc5b72b';
